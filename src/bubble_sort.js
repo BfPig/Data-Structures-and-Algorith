@@ -1,17 +1,13 @@
-// 插入排序
-let bubble_sortName  = "插入排序";
+// 冒泡排序
 function bubble_sortPx(array, fn) {
     let compare = fn || function(a, b) { return a < b }
-    for (let i = 1; i < array.length; i++) {
-        let minIndex = i;
-        for (let j = i; j > 0; j--) {
-            if (compare(array[j], array[j - 1])) {
-                [array[j], array[j - 1]] = [array[j - 1], array[j]]
-            } else {
-                break;
+    for (let i = 0; i < array.length - 1; i++) {
+        for (let j = 0; j < array.length - 1 - i; j++) {
+            if (compare(array[j + 1], array[j])) {
+                [array[j], array[j + 1]] = [array[j + 1], array[j]]
             }
         }
     }
     return array;
 }
-export { bubble_sortName, bubble_sortPx }
+export { bubble_sortPx }

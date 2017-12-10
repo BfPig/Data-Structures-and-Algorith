@@ -1,5 +1,4 @@
 // 选择排序
-let selection_sortName  = "选择排序";
 function selection_sortPx(array, fn) {
     let compare = fn || function(a, b) { return a < b }
     for (let i = 0; i < array.length; i++) {
@@ -14,4 +13,4 @@ function selection_sortPx(array, fn) {
     return array;
 }
 
-export { selection_sortName, selection_sortPx }
+export { selection_sortPx }

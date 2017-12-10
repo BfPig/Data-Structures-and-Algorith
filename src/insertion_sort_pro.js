@@ -1,6 +1,4 @@
 // 插入排序优化
-let insertion_sort_proName = "插入排序优化";
-
 function insertion_sort_proPx(array, fn) {
     let compare = fn || function(a, b) { return a < b }
     for (let i = 1; i < array.length; i++) {
@@ -13,4 +11,4 @@ function insertion_sort_proPx(array, fn) {
     }
     return array;
 }
-export { insertion_sort_proName, insertion_sort_proPx }
+export { insertion_sort_proPx }
